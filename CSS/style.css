@@ -1,7 +1,7 @@
 /*
 Colors used:
-Primary Color (Blue): #05676e;
-Secondary Color (Green): #489c79;
+Primary Color (Blue): #ffffff;
+Secondary Color (Green): #F7B500;
 */
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 body {
@@ -10,7 +10,7 @@ body {
   font-size: 16px; /* Sets the font size to 16px */
   font-weight: 300; /* Sets the font weight to 300 */
   line-height: 1.6; /* Sets the line-height to 1.6 * the font-size */
-  color: #4a4a4a;
+  color: #ffffff;
   }
 
 
@@ -39,22 +39,22 @@ body {
   width: 100%;
 }
 a {
-  color: #324AEF;
+  color: #ffffff;
   text-decoration: none; /* No underlining */
 }
 a:hover {
-  color: #324AEF;
+  color: #F7B500;
   text-decoration: underline; /* Underlining when hovering over a link */
 }
 a:visited { /* visited link */
-  color: #324AEF;
+  color: #ffffff;
 }
 a:active { /* selected link */
-  color: #324AEF;
+  color: #ffffff;
 }
 a:hover,
 a:focus {
-  color: #cc6540;
+  color: #F7B500
   text-decoration: underline;
 }
 /* Document
@@ -406,7 +406,7 @@ template {
 }
 .button {
   display: inline-block; /* since the <a> tag is inline by default, we need to change this to inline-block, but more on this in the next exercise */
-  background-color: #ff7f50;
+  background-color: #F7B500;
   color: #ffffff !important; /* needed to override the default link color */
   font-weight: 400;
   padding: 10px;
