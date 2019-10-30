@@ -9,29 +9,25 @@
 </head>
 <!-- Navigation -->
 <body>
-  <header>
-    <section id="hero">
-    <div class="container">
-    <a href="index.html">
-      <nav>
-        <ul>
-          <div class="logo">
-        <a href="index.html" ¨="">Karolina Oczkowicz
-        </div>
-<a href="about.html" target="_self">About</a>
-    <a href="index.html" ¨="">work</a>
-  <a href="mailto:oczkowiczkarolina@gmail.com">contact</a>
-      </ul>
-      </nav>
-  </header>
+  	<header class="page-header">
+  		<div class="container">
+  			<section class="menu-brand">
+  				<a href="index.html">
+  					<img src="Images/Logo.png" alt="Logo">
+  				</a>
+  			</section>
+  			<nav class="menu-links">
+  				<ul>
+  					<li><a href="about.html" target="_self">About</a></li>
+  					<li><a href="index.html" ¨="">work</a></li>
+  					<li><a href="mailto:oczkowiczkarolina@gmail.com">contact</a></li>
+  				</ul>
+  			</nav>
+  		</div>
+  	</header>
       <div class="container">
-      <source srcset="Images/Swimmer.jpg" media="(max-width:400px)">
-    <img src="Images/Swimmer.jpg" media="style="max-width: 400px;"alt="Swimmer">
-    </section>
-    <h1>Costa. Buidling personalized experience.</h1>
-    <h2>The story of the iterative process driven by human feedback</h2>
-         </div>
-        <div>
+    <h2>Costa - the story of the iterative process driven by human feedback</h2>
+</div>
             <ul>
             <h3>Problem</h3>
                 <p>The enthusiasts of different water sport disciplines need a clear, concise and visually appealing way to understand the weather conditions because they want to practice water sports safely.
@@ -66,22 +62,33 @@
     </picture>
             <h1>RESEARCH AND PROBLEM DEFINITION</h1>
          <H2>HYPOTHESIS</H2>
-         <source srcset="Images/collage.jpg" media="(max-width:400px)">
-       <img src="Images/collage.jpg" media="style="max-width: 400px;"alt="Collage">
-         <P>The observations, survey and the interviews I conducted at the beginning of my assignment, led me to question the necessity of implementing global weather forecast maps into the design. The results of the above actions proved that the users are interested in checking one or a few particular locations only. It is very different to the method applied in the TV weather forecast with multiple users in front of a screen who are based in multiple locations. Moreover, global weather maps do not work well on mobile; they occupy a lot of space and show irrelevant data as users are interested in checking the weather forecast for particular locations. Consequently, I decided to exclude the weather forecast maps from the design at the very early stage of the design process.</P>
-              </div>
+         <section class="gallery" id="gallery">
+         <header class="section-header">
+         <section class="gallery-item">
+           <a href="Images/Collage.jpg" class="gallery-image-link" title="Collage">
+             <img src="Images/Collage.jpg" alt="Alt text">
+           </a>
+         </section>
+         </section>
                </div>
           </div>
         <div>
             <hr>
-               <h1>PERSONAS</h1>
+               <h2>PERSONAS</h2>
             <h3>USERS.FIRST</h3>
-            <div>
-            <source srcset="Images/PersonaAnna.jpg" media="(max-width:400px)">
-          <img src="Images/PersonaAnna.jpg" media="style="max-width: 400px;"alt="Anna">
-          <source srcset="Images/PersonaRamon.jpg" media="(max-width:400px)">
-        <img src="Images/PersonaRamon.jpg" media="style="max-width: 400px;"alt="Ramon">
-      </div>
+            <section class="gallery" id="gallery">
+            <header class="section-header">
+            <section class="gallery-item">
+              <a href="Images/PersonaAnna.jpg" class="gallery-image-link" title="User Persona">
+                <img src="Images/PersonaAnna.jpg" alt="Alt text">
+              </a>
+              <h3><a href="Images/PersonaAnna.jpg">Persona</a></h3>
+              <a href="Images/PersonaRamon.jpg" class="gallery-image-link" title="User Persona">
+                <img src="Images/PersonaRamon.jpg" alt="Alt text">
+              </a>
+              <h3><a href="Images/PersonaRamon.jpg">Persona</a></h3>
+            </section>
+            </section>
     <p>Personas were created to synthesize & gather all the outcome of the interviews. The participants were recruited from the target group and I made sure that they meet previously defined criteria.
          <H3>Design impact</H3>
      Focussing on users and how they interact with the prototype helped me to understand the physical, enviromantal conditions as well as emotional state of the users at the moment of interaction. The findings led me to change the way I approached this project differentely:
@@ -100,10 +107,10 @@
         </ul>
     <p>Based on this information, I was able to create user stories and define the MVP. Building MVP allowed me to start the first iterations.</p>
 <Hi>DESIGN EXPLORATIONS</Hi>
-            <H3>Sketch.Anywhere</H3>
+            <H3>Sketch. Anywhere.</H3>
             <p>Once the problem was defined I could use my sketching skills to draft the solution. I used Balsamiq to design low fidelity wireframes based upon the user flows and Sketch to design high fidelity wireframes and mockups. This is when I could start the second research phase  - making sure that the design is pleasant and easy to use by applying usability testing method.  The low-fi prototype allowed me to iterate quickly and I could share my design and gather the very first feedback. The fully functioning prototyping was used when testing a more mature design.</p>
-<h1>TESTING PHASE</h1>
-<H3>Test.Often</H3>
+<h2>TESTING PHASE</h2>
+<H3>Test. Often.</H3>
             <p>Someone once said that designing without testing is like getting into a cab and saying ¨just drive¨. I conducted several testing rounds that revealed possible usability problems and proved that human feedback is the king. Before starting to run the test I prepared the test plan which included e.g. the scope and the user tasks. I recruited the participants and conducted the test using the fully functioning prototype. When conducting the usability testing the ¨think aloud¨ method was applied and to evaluate the findings I used Jakob Nielsen’s scale.
 
             The testing and its results proved that there were parts of the navigation system that the users understand however there were some critical parts of the information architecture that were very problematic and the users did not know where to go to do critical tasks e.g.:</p>
@@ -111,8 +118,8 @@
             <li> the users were expecting to have the weather parameters already preset once they chose a watersport (or watersports). Solution: default settings </li>
             <li>Some users felt frustrated that they could choose one value only when selecting optimal weather conditions for receiving notifications. Solution: dual sliders </li>
             </ul>
-            <h1>WRAPPING UP</h1>
-<H3>What have I learned from this project?</H3>
+            <h2>WRAPPING UP</h2>
+<h3>What have I learned from this project?</h3>
             <p>When working on Costa I have learned to:
                 <ul>
           <li>name the problem </li>
@@ -121,17 +128,23 @@
                     <li>design to draft the solution</li>
             </ul>
                     <p>The design process is not over. More water sports and non-weather alerts can be added to keep on improving the experience.</p>
-            <H3>The same concept was developped for a native app. To see the product click here</H3>
               </div>
 <div class="row">
   <footer>
-      <section id="contact">
-          <div class="container">
-            <div class="row">
-                <div class="center">
-        <h3>Feel free to reach out if you want to collaborate, connect or just chat:</h3>
-        <h3><a href="mailto:oczkowiczkarolina@gmail.com">Email me</a></h3>
-        <h3><a href="https://www.linkedin.com/in/karolina-joanna-oczkowicz/" target="_blank">Linkedin</a></h3>
+    <footer class="page-footer">
+  		<div class="container">
+  			<section class="page-footer">
+            <nav class="footer-links">
+              <ul>
+    <a href="mailto:oczkowiczkarolina@gmail.com">Email me</a>
+  <a href="https://www.linkedin.com/in/karolina-joanna-oczkowicz/" target="_blank">Linkedin</a>
+    <a href="https://dribbble.com/KarolinaJoanna2019" target="_blank">Dribble</a>
+  </ul>
+    </nav>
+    </class>
+  </section>
+    <div class="row">
+        <div class="row">
         </div>
       </div>
     </div>

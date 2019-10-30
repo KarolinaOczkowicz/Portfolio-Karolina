@@ -1,6 +1,7 @@
-
+<DOCTYPE html>
 <html lang="en" dir="ltr">
 <head>
+  <meta charset="UTF-8"
   <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css">
   <link rel="stylesheet" type="text/css" href="css/style.css">
   <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
@@ -8,78 +9,86 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <!-- Navigation -->
-<body>
-  <header>
-    <section id="hero">
-            <div class="navigation">
-            <a href="index.html"=Karolina Oczkowicz
-          </div>
-            <nav>
-        <ul>
-          <li><a href="index.html" ¨="">Karolina Oczkowicz</a></li>
-          <li><a href="about.html" target="_self">About</a></li>
-              <li><a href="index.html" ¨="">Work</a></li>
-            <li><a href="mailto:oczkowiczkarolina@gmail.com">Contact</a>
-              </div>
-      </ul>
-      </nav>
+<body id="top">
+
+	<header class="page-header">
+		<div class="container">
+			<section class="menu-brand">
+				<a href="index.html">
+					<img src="Images/Logo.png" alt="Logo">
+				</a>
+			</section>
+
+			<nav class="menu-links">
+				<ul>
+					<li><a href="about.html" target="_self">About</a></li>
+					<li><a href="index.html" ¨="">work</a></li>
+					<li><a href="mailto:oczkowiczkarolina@gmail.com">contact</a></li>
+				</ul>
+			</nav>
+		</div>
+	</header>
+
+	<section class="slider" id="slider">
+		<div class="slides">
+			<div class="single-slide slide-1">
+				<h2>Karolina Oczkowicz is a UX Designer based in Barcelona</h2>
+				<button class="btn btn-lg">Work</button>
+			</div>
+		</div>
+	</section>
+  <section class="gallery" id="gallery">
+    <header class="section-header">
+      <h2>WORK</h2>
+      <p>Data and human feedback driven design.</p>
+    </header>
+
+    <div class="container">
+      <section class="gallery-item">
+        <a href="Images/CostaMockups.jpg" class="gallery-image-link" title="Costa">
+          <img src="Images/CostaMockups.jpg" alt="Alt text">
+        </a>
+
+        <h3><a href="Images/CostMockups.jpg">Costa</a></h3>
+        <p>The story of the iterative design process driven by human feedback.</p>
+              <a href="Costa.html" target="_self"" class="button">Read more</a>
+      </section>
+      <section class="gallery-item">
+        <a href="Images/Souperb1.jpg" class="gallery-image-link" title="Souperb">
+          <img src="Images/Souperb1.jpg" alt="Alt text">
+        </a>
+
+        <h3><a href="Images/Souperb1.jpg">Souperb</a></h3>
+        <p>Where business and the users´goals meet.</p>
+              <a href="Costa.html" target="_self"" class="button">Read more</a>
+      </section>
+      <section class="gallery-item">
+        <a href="Images/Souperb1.jpg" class="gallery-image-link" title="Souperb">
+          <img src="Images/Souperb1.jpg" alt="Alt text">
+        </a>
+
+        <h3><a href="Images/Souperb1.jpg">Caming soon</a></h3>
+        <p>Where business and the users´goals meet.</p>
+              <a href="Costa.html" target="_self"" class="button">Read more</a>
+      </section>
     </div>
-  </header>
-</body>
-<!-- Image plus call to action -->
-<main>
-    <section id="work">
-  <div class="container">
-    <div class="row">
-        <div class="center">
-    <h1>Karolina Oczkowicz is a UX Designer based in Barcelona.</h1>
-    </div>
-<div><!-- open row that holds (2) columns for project -->
-<div><!-- open first column (used for image) -->
-        <div class="row">
-  <picture>
-    <source srcset="Images/CostaMockups.jpg" media="(max-width:400px)">
-  <img src="Images/CostaMockups.jpg" media="style="max-width: 400px;"alt="CostaMockups">
-  </picture>
-</div><!-- end first column -->
-<div><!-- open second column (used for text) -->
-  <div class="center">
-  <h2>Costa</h2><!-- heading for the project -->
-    <div class="row">
-  <p><!-- open paragraph -->
-    Personalized weather forecast app for people who practice watersports.
-  </p><!-- end paragraph -->
-  <p><!-- open paragraph -->
-    The story of the iterative design process driven by human feedback.
-  </p><!-- end paragraph -->
-  <a href="Costa.html" target="_self"" class="button">Read more</a>
-</div><!-- end second column -->
-</div><!-- end row that holds (2) columns for project -->
-</div><!-- end first column -->
-<div><!-- open second column (used for text) -->
-  <div>
-    <div>
-    <picture>
-      <source srcset="Images/Souperb1.jpg" media="(max-width:400px)">
-    <img src="Images/Souperb1.jpg" media="style="max-width: 400px;"alt="Superb">
-    </picture>
-      <div class="center">
-  <h2>Souperb</h2><!-- heading for the project -->
-  <p><!-- open paragraph -->
-    The path twords building a MVP product which responds to specific users´needs.
-  </p><!-- end paragraph -->
-  <a href="#" class="button">Read more</a>
-</div><!-- end second column -->
-</div><!-- end row that holds (2) columns for project -->
-</main>
+  </section>
+
 <footer>
-    <section id="contact">
-        <div class="container">
-          <div class="row">
-              <div class="center">
-      <h3>Feel free to reach out if you want to collaborate, connect or just chat:</h3>
-      <h3><a href="mailto:oczkowiczkarolina@gmail.com">Email me</a></h3>
-      <h3><a href="https://www.linkedin.com/in/karolina-joanna-oczkowicz/" target="_blank">Linkedin</a></h3>
+  <footer class="page-footer">
+		<div class="container">
+			<section class="page-footer">
+          <nav class="footer-links">
+            <ul>
+  <a href="mailto:oczkowiczkarolina@gmail.com">Email me</a>
+<a href="https://www.linkedin.com/in/karolina-joanna-oczkowicz/" target="_blank">Linkedin</a>
+  <a href="https://dribbble.com/KarolinaJoanna2019" target="_blank">Dribble</a>
+</ul>
+  </nav>
+  </class>
+</section>
+  <div class="row">
+      <div class="row">
       </div>
     </div>
   </div>
