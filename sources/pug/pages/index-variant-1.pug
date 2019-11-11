@@ -1,0 +1,287 @@
+extends  ../_skeleton
+
+//- Includes
+include ../elements/_ui-list-inline-icon
+include ../elements/_ui-progress-bar-linear
+include ../elements/_ui-post-project
+include ../elements/_ui-parallax
+
+block variables
+	- var activeIndex = 0
+	- var pageName = 'Home'
+
+block page
+	include ../sections/_header-default
+	include ../sections/_section-slider-digital
+
+	// Our Services 
+	section.services.section-xl.bg-default.text-center
+		
+		.bg-decor.d-flex.align-items-center( data-parallax-scroll='{"y": 100,  "smoothness": 30}' )
+			+png('bg-decor-1')(class='')
+		.bg-decor.d-flex.align-items-end(  data-parallax-scroll='{"x": -150, "from-scroll": 420, "smoothness": 30}' )
+			+png('bg-decor-2')
+		.bg-decor( data-parallax-scroll='{"x": 80, "y": 80,  "smoothness": 30}' )
+			+png('bg-decor-3')
+		.container
+			h4.heading-decorated Our Services
+			// Circle carousel 
+			.carousel-wrapper
+				.circle-carousel( data-speed='1000', data-autoplay='5000' )
+					// slides 
+					.slides
+						.content-box
+							.content-box-inner
+								.content-box-img.bg-overlay-dark(style='background-image: url(images/service-1.jpg)')
+									.content-title-wrap
+										.content-title
+											h4: a(href='single-service.html') Bootstrap Framework
+		
+						.content-box
+							.content-box-inner
+								.content-box-img(style='background-image: url(images/service-2.jpg)')
+									.content-title-wrap
+										.content-title
+											h4: a(href='single-service.html') Novi Builder
+		
+						.content-box
+							.content-box-inner
+								.content-box-img(style='background-image: url(images/service-3.jpg)')
+									.content-title-wrap
+										.content-title
+											h4: a(href='single-service.html') Responsive & Retina Ready
+		
+						.content-box
+							.content-box-inner
+								.content-box-img.bg-overlay-dark(style='background-image: url(images/service-4.jpg)')
+									.content-title-wrap
+										.content-title
+											h4: a(href='single-service.html') Tons of Tools for Real Needs
+		
+						.content-box
+							.content-box-inner
+								.content-box-img(style='background-image: url(images/service-5.jpg)')
+									.content-title-wrap
+										.content-title
+											h4: a(href='single-service.html') Thought Through Layout
+		
+						.content-box
+							.content-box-inner
+								.content-box-img.bg-overlay-dark(style='background-image: url(images/service-6.jpg)')
+									.content-title-wrap
+										.content-title
+											h4: a(href='single-service.html') Clean and Crispy Design
+		
+						.content-box
+							.content-box-inner
+								.content-box-img(style='background-image: url(images/service-7.jpg)')
+									.content-title-wrap
+										.content-title
+											h4: a(href='single-service.html') Built For Speed
+		
+						.content-box
+							.content-box-inner
+								.content-box-img(style='background-image: url(images/service-8.jpg)')
+									.content-title-wrap
+										.content-title
+											h4: a(href='single-service.html') Flexible and Multipurpose
+					// pagination
+					.pagination
+						.item: .dot
+							i.linear-icon-pencil-ruler
+							span
+		
+						.item: .dot
+							i.linear-icon-users
+							span
+		
+						.item: .dot
+							i.linear-icon-wall
+							span
+		
+						.item: .dot
+							i.linear-icon-apartment
+							span
+		
+						.item: .dot
+							i.linear-icon-home4
+							span
+		
+						.item: .dot
+							i.linear-icon-pencil-ruler2
+							span
+		
+						.item: .dot
+							i.linear-icon-magic-wand
+							span
+		
+						.item: .dot
+							i.linear-icon-menu3
+							span
+		
+					.prev
+						span PREV
+					.next
+						span NEXT
+
+	// About us
+	section.bg-gray-lighter.object-wrap.decor-text(data-content='About')
+		.bg-decor.d-flex.align-items-center.justify-content-end( data-parallax-scroll='{"y": 50,  "smoothness": 30}' )
+			+png('bg-decor-4')
+		.section-lg
+			.container
+				.row.justify-content-end
+					.col-lg-6
+						h4.heading-decorated About us
+						p We are a team of professional, energetic individuals with talented designers and experienced managers available to guide our clients through the flawless and timely execution of any web design project. Since day one, we have been delivering creative and unique websites to our clients worldwide.
+						.row.row-30
+							.col-xl-6
+								// Blurb minimal
+								article.blurb.blurb-minimal: .unit.flex-row.unit-spacing-md
+									.unit-left
+										.blurb-minimal__icon: span.icon.linear-icon-menu3
+									.unit-body
+										p.blurb__title.heading-6: a(href=singleService) Bootstrap Framework
+										p theFuture is based on Bootstrap Framework, which makes it a nice template for any purpose.
+
+							.col-xl-6
+								// Blurb minimal
+								article.blurb.blurb-minimal: .unit.flex-row.unit-spacing-md
+									.unit-left
+										.blurb-minimal__icon: span.icon.linear-icon-users2
+									.unit-body
+										p.blurb__title.heading-6: a(href=singleService) Clean and Crispy Design
+										p theFuture is crafted by top industry leaders with love, care and customer needs in mind.
+
+		.object-wrap__body.object-wrap__body-sizing-1.object-wrap__body-md-left.bg-image(style='background-image: url(images/bg-image-1.jpg)')
+
+	section.section-md.bg-default.decor-text(data-content='Features')
+		.bg-decor.d-flex.align-items-center( data-parallax-scroll='{"x": -50,  "smoothness": 30}' )
+			+png('bg-decor-5')
+		.container
+			.row.justify-content-md-center.justify-content-lg-between.row-50.align-items-center
+				.col-md-8.col-lg-6
+					h4.heading-decorated Impressive Features
+
+					// Blurb minimal
+					article.blurb.blurb-minimal: .unit.flex-row.unit-spacing-md
+						.unit-left
+							.blurb-minimal__icon: span.icon.linear-icon-rocket
+						.unit-body
+							p.blurb__title.heading-6 Built for Speed
+							p Our template was built for speed and performance. Get the best results at GTmetrix and Google PageSpeed.
+
+					// Blurb minimal
+					article.blurb.blurb-minimal: .unit.flex-row.unit-spacing-md
+						.unit-left
+							.blurb-minimal__icon: span.icon.linear-icon-equalizer
+						.unit-body
+							p.blurb__title.heading-6 Flexible and Multipurpose
+							p theFuture allows to create various websites for complex and scalable  projects.
+
+					// Blurb minimal
+					article.blurb.blurb-minimal: .unit.flex-row.unit-spacing-md
+						.unit-left
+							.blurb-minimal__icon: span.icon.linear-icon-arrow-down-square
+						.unit-body
+							p.blurb__title.heading-6 Social Integration
+							p You can easily integrate your Twitter and Facebook accounts with the website using the social widgets.
+
+				.col-md-7.col-lg-4
+					figure.image-sizing-1( data-parallax-scroll='{"y": -50,  "smoothness": 30}' )
+						+png('home-business-1-1481x2068')
+
+	include ../sections/_section-cta-3
+
+	include ../sections/_section-portfolio
+
+	include ../sections/_section-counters
+
+	// Meet Our Team
+	section.section-md.bg-gray-lighter.text-center.decor-text(data-content='Team')
+		.bg-decor.d-flex.align-items-start( data-parallax-scroll='{"y": -50,  "smoothness": 30}' )
+			+png('bg-decor-7')
+		.container
+			h4.heading-decorated Meet Our Team
+			.row.row-50.offset-top-1
+				.col-md-6.col-lg-4
+					// Thumb corporate
+					.thumb.thumb-corporate
+						.thumb-corporate__main
+							+jpg('calvin-fitzerald-418x315')
+
+							.thumb-corporate__overlay
+								+list-inline-icon({
+									list_class: ['list-inline-sm', 'thumb-corporate__list'],
+									items: [
+										"icon-sm fa-facebook",
+										'icon-sm fa-twitter',
+										'icon-sm fa-google-plus',
+										'icon-sm fa-vimeo',
+										'icon-sm fa-youtube',
+										'icon-sm fa-pinterest-p'
+									]
+								})
+
+						.thumb-corporate__caption
+							p.thumb__title: a(href=teamMember) Amanda Smith
+							p.thumb__subtitle Director
+
+				.col-md-6.col-lg-4
+					// Thumb corporate
+					.thumb.thumb-corporate
+						.thumb-corporate__main
+							+jpg('luis-maxwell-418x415')
+
+							.thumb-corporate__overlay
+								+list-inline-icon({
+									list_class: ['list-inline-sm', 'thumb-corporate__list'],
+									items: [
+										"icon-sm fa-facebook",
+										'icon-sm fa-twitter',
+										'icon-sm fa-google-plus',
+										'icon-sm fa-vimeo',
+										'icon-sm fa-youtube',
+										'icon-sm fa-pinterest-p'
+									]
+								})
+
+						.thumb-corporate__caption
+							p.thumb__title: a(href=teamMember) Brian King
+							p.thumb__subtitle Marketing manager
+
+				.col-md-6.col-lg-4
+					// Thumb corporate
+					.thumb.thumb-corporate
+						.thumb-corporate__main
+							+jpg('josh-wagner-418x315')
+
+							.thumb-corporate__overlay
+								+list-inline-icon({
+									list_class: ['list-inline-sm', 'thumb-corporate__list'],
+									items: [
+										"icon-sm fa-facebook",
+										'icon-sm fa-twitter',
+										'icon-sm fa-google-plus',
+										'icon-sm fa-vimeo',
+										'icon-sm fa-youtube',
+										'icon-sm fa-pinterest-p'
+									]
+								})
+
+						.thumb-corporate__caption
+							p.thumb__title: a(href=teamMember) George Nelson
+							p.thumb__subtitle Designer
+
+
+	include ../sections/_section-posts
+
+	// pricing table
+	include ../sections/_section-pricing-table-1
+
+	include ../sections/_section-testimonials
+
+	include ../sections/_section-clients
+
+	// Page Footer 
+	include ../sections/_footer-corporate-2

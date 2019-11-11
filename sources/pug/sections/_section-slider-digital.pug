@@ -1,0 +1,52 @@
+include ../elements/_ui-rd-video
+// Swiper
+svg( class='defs' )
+	defs
+		lineargradient#gradient1(x1='0%', y1='0%', x2='100%', y2='100%')
+			stop( offset='50%', stop-color='#AA54ED' )
+				animate( attributename='stop-color', values='#AA54ED; #5348E2; #AA54ED', dur='5s', repeatcount='indefinite' )
+			stop( offset='100%', stop-color='#5348E2' )
+				animate( attributename='stop-color', values='#5348E2; #AA54ED; #5348E2', dur='5s', repeatcount='indefinite' )
+
++swiper({ 
+	effect: 'circle-bg',
+	speed: 1600,
+	loop: 'false',
+	mousewheel: 'false',
+	keyboard: 'false',
+	navigation: true,
+	pagination: true,
+	autoplay: 4600 })( data-circle-fill='url(#gradient1)' class='swiper-slider_fullheight swiper-digital')
+	.swiper-slide( data-circle-cx='.3', data-circle-cy='.5', data-circle-r='.14' style='background-image: url(images/slider-1.png);')
+		.swiper-slide-caption(style='width: 100%')
+			.container
+				.row
+					.col-lg-6.col-xxl-5.d-flex.justify-content-center
+						div
+							h6.text-white.text-right( data-swiper-anime='{ "animation": "swiperContentRide", "duration": 800, "delay": 500 }' ) WEB Agency
+							h1.text-white( data-swiper-anime='{ "animation": "swiperContentRide", "duration": 800, "delay": 700 }' ) 
+								span.text-lowercase.heading-4.text-white the
+								span FUTURE
+			
+	.swiper-slide( data-circle-cx='.7', data-circle-cy='.5', data-circle-r='.2' style='background-image: url(images/slider-2.png);')
+			.swiper-slide-caption.text-center(style='width: 100%')
+				.container
+					.row.justify-content-center
+						.col-lg-8
+							h2.text-white( data-swiper-anime='{ "animation": "swiperContentRide", "duration": 800, "delay": 500 }' ) Built by geeks & used by humans
+							h5.text-white.text-width-2.block-centered( data-swiper-anime='{ "animation": "swiperContentRide", "duration": 800, "delay": 700 }' ) theFuture aims to satisfy real needs of real projects. We've got a pack of tools for that.
+							.group-lg.group-middle(data-swiper-anime='{ "animation": "swiperContentRide", "duration": 800, "delay": 900 }')
+								a.button.button-black.button-shadow(  href='#' + seeFeaturesLink, data-custom-scroll-to=seeFeaturesLink) See Features
+								a.button.button-primary.button-shadow( href=getTemplateLink) Buy template
+								
+	.swiper-slide( data-circle-cx='.6', data-circle-cy='.5', data-circle-r='.18' style='background-image: url(images/slider-3.png);' )
+		.swiper-slide-caption.d-flex.justify-content-center
+			div
+				h4.text-white.text-right( data-swiper-anime='{ "animation": "swiperContentRide", "duration": 800, "delay": 200 }' ) New HTML
+				h1.text-white.bg-accent.p-2.pt-lg-3.pl-lg-3.pr-lg-3( data-swiper-anime='{ "animation": "swiperContentRide", "duration": 800, "delay": 400 }' )
+					span.text-lowercase.heading-4.text-white the
+					span FUTURE
+				h4.text-white.text-left.mt-1( data-swiper-anime='{ "animation": "swiperContentRide", "duration": 800, "delay": 600 }' ) Templates Generation
+				.group-lg.group-middle( data-swiper-anime='{ "animation": "swiperContentRide", "duration": 800, "delay": 800 }' )
+					a.button.button-primary.button-shadow( href='#' + seeFeaturesLink, data-custom-scroll-to=seeFeaturesLink) See Features
+					a.button.button-black.button-shadow( href=getTemplateLink) Buy template

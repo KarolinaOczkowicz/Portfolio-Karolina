@@ -1,0 +1,139 @@
+extends  ../_skeleton
+
+//- Includes
+include ../elements/_ui-parallax
+include ../elements/_ui-breadcrumbs
+
+block variables
+	- var activeIndex = 0
+	- var pageName = 'Home'
+
+block page
+	// Page header
+	include ../sections/_header-default
+
+	include ../sections/_section-slider-personal
+
+	include ../sections/_section-features-2
+
+	// About us
+	section.bg-gray-lighter.object-wrap
+		.section-lg
+			.bg-decor.d-flex.align-items-center( data-parallax-scroll='{"y": 100, "smoothness": 30}' )
+				+png('bg-decor-7')
+			.container
+				.row.justify-content-end
+					.col-lg-5
+						h4.heading-decorated About us
+						p We are a team of professional, energetic individuals with talented designers and experienced managers available to guide our clients through the flawless and timely execution of any residential design project. Since day one, we have been delivering creative and cozy interiors to our clients worldwide.
+						.row.row-30
+							.col-xl-6
+								// Blurb minimal
+								article.blurb.blurb-minimal: .unit.flex-row.unit-spacing-md
+									.unit-left
+										.blurb-minimal__icon: span.icon.linear-icon-menu3
+									.unit-body
+										p.blurb__title.heading-6: a(href=singleService) Bootstrap Framework
+										p Quaint is based on Bootstrap Framework, which makes it a nice template for any purpose.
+
+							.col-xl-6
+								// Blurb minimal
+								article.blurb.blurb-minimal: .unit.flex-row.unit-spacing-md
+									.unit-left
+										.blurb-minimal__icon: span.icon.linear-icon-users2
+									.unit-body
+										p.blurb__title.heading-6: a(href=singleService) Clean and Crispy Design
+										p Quaint is crafted by top industry leaders with love, care and customer needs in mind.
+
+		.object-wrap__body.object-wrap__body-sizing-1.object-wrap__body-md-left.bg-image(style='background-image: url(images/bg-image-1.jpg)')
+
+	include ../sections/_section-portfolio-justify
+
+	include ../sections/_section-cta-4
+
+	// Meet Our Team
+	section.section-lg.bg-default.text-center
+		.bg-decor.d-flex.align-items-center.justify-content-center( data-parallax-scroll='{"y": 70,  "smoothness": 30}' )
+			+png('bg-decor-11')
+		.container
+			h4.heading-decorated Meet Our Team
+			.row.row-50.offset-top-1
+				.col-md-6.col-lg-4
+					// Thumb corporate
+					.thumb.thumb-corporate
+						.thumb-corporate__main
+							+jpg('calvin-fitzerald-418x315')
+
+							.thumb-corporate__overlay
+								+list-inline-icon({
+									list_class: ['list-inline-sm', 'thumb-corporate__list'],
+									items: [
+										"icon-sm fa-facebook",
+										'icon-sm fa-twitter',
+										'icon-sm fa-google-plus',
+										'icon-sm fa-vimeo',
+										'icon-sm fa-youtube',
+										'icon-sm fa-pinterest-p'
+									]
+								})
+
+						.thumb-corporate__caption
+							p.thumb__title: a(href=teamMember) Brian King
+							p.thumb__subtitle Director
+
+				.col-md-6.col-lg-4
+					// Thumb corporate
+					.thumb.thumb-corporate
+						.thumb-corporate__main
+							+jpg('luis-maxwell-418x415')
+
+							.thumb-corporate__overlay
+								+list-inline-icon({
+									list_class: ['list-inline-sm', 'thumb-corporate__list'],
+									items: [
+										"icon-sm fa-facebook",
+										'icon-sm fa-twitter',
+										'icon-sm fa-google-plus',
+										'icon-sm fa-vimeo',
+										'icon-sm fa-youtube',
+										'icon-sm fa-pinterest-p'
+									]
+								})
+
+						.thumb-corporate__caption
+							p.thumb__title: a(href=teamMember) Amanda Smith
+							p.thumb__subtitle Marketing manager
+
+				.col-md-6.col-lg-4
+					// Thumb corporate
+					.thumb.thumb-corporate
+						.thumb-corporate__main
+							+jpg('josh-wagner-418x315')
+
+							.thumb-corporate__overlay
+								+list-inline-icon({
+									list_class: ['list-inline-sm', 'thumb-corporate__list'],
+									items: [
+										"icon-sm fa-facebook",
+										'icon-sm fa-twitter',
+										'icon-sm fa-google-plus',
+										'icon-sm fa-vimeo',
+										'icon-sm fa-youtube',
+										'icon-sm fa-pinterest-p'
+									]
+								})
+
+						.thumb-corporate__caption
+							p.thumb__title: a(href=teamMember) George Nelson
+							p.thumb__subtitle Designer
+
+	include ../sections/_section-posts
+
+	include ../sections/_section-testimonials
+
+	// Page Footer
+	include ../sections/_footer-modern
+
+block modals
+	include ../includes/_modal-login
+	include ../includes/_modal-register

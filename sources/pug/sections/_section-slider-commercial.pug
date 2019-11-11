@@ -1,0 +1,48 @@
+// Swiper
+svg( class='defs' )
+	defs
+		lineargradient#gradient1(x1='0%', y1='0%', x2='100%', y2='100%')
+			stop( offset='50%', stop-color='#AA54ED' )
+				animate( attributename='stop-color', values='#AA54ED; #5348E2; #AA54ED', dur='5s', repeatcount='indefinite' )
+			stop( offset='100%', stop-color='#5348E2' )
+				animate( attributename='stop-color', values='#5348E2; #AA54ED; #5348E2', dur='5s', repeatcount='indefinite' )
+				
++swiper({ 
+	effect: 'frame-trapeze', 
+	speed: 1200, 
+	loop: 'true', 
+	mousewheel: 'false', 
+	keyboard: 'true', 
+	autoplay: '5500',
+	navigation: true })( data-frame-fill='url(#gradient1)' ) 
+	.swiper-slide
+		.swiper-slide-img( style='background-image: url(images/slider-slide-5-1920x1280.jpg);', data-swiper-anime='{ "animation": "swiperSlideRotate", "duration": 2000, "delay": 600 }' )
+		.swiper-slide-caption.text-center.context-dark
+			h1( data-swiper-anime='{ "animation": "swiperContentStack", "duration": 1000, "delay": 500 }' )
+				span.text-lowercase.heading-2.text-white the
+				span FUTURE
+			h3( data-swiper-anime='{ "animation": "swiperContentStack", "duration": 1000, "delay": 600 }' ) New HTML Templates Generation
+			.group-lg.group-middle( data-swiper-anime='{ "animation": "swiperContentStack", "duration": 1000, "delay": 700 }' )
+				a.button.button-primary.button-shadow( href='#' + seeFeaturesLink, data-custom-scroll-to=seeFeaturesLink) See Features
+				a.button.button-black.button-shadow( href=getTemplateLink) Buy template
+			
+	.swiper-slide
+		.swiper-slide-img( style='background-image: url(images/slider-slide-6-1920x986.jpg);', data-swiper-anime='{ "animation": "swiperSlideRotate", "duration": 2000, "delay": 600 }' )
+		.swiper-slide-caption.context-dark
+			h2( data-swiper-anime='{ "animation": "swiperContentStack", "duration": 1000, "delay": 500 }' )
+				| The Power of Bootstrap  
+				br.d-none.d-lg-block
+				|  Discover it with theFuture
+			a.button.button-primary.button-shadow( href=getTemplateLink, data-swiper-anime='{ "animation": "swiperContentStack", "duration": 1000, "delay": 700 }' ) Buy template
+	.swiper-slide 
+		.swiper-slide-img( style='background-image: url(images/slider-slide-7-1920x1080.jpg);', data-swiper-anime='{ "animation": "swiperSlideRotate", "duration": 2000, "delay": 600 }' )
+		.swiper-slide-caption.context-dark
+			.container
+				.row.justify-content-center
+					.col-lg-7
+						h2( data-swiper-anime='{ "animation": "swiperContentStack", "duration": 1000, "delay": 500 }'  ) Built by geeks & used by humans
+						h5.text-width-2.block-centered( data-swiper-anime='{ "animation": "swiperContentStack", "duration": 1000, "delay": 600 }' ) theFuture aims to satisfy real needs of real projects. We've got a pack of tools for that.
+						.group-lg.group-middle( data-swiper-anime='{ "animation": "swiperContentStack", "duration": 1000, "delay": 700 }' )
+							a.button.button-black.button-shadow( href='#' + seeFeaturesLink, data-custom-scroll-to=seeFeaturesLink) See Features
+							a.button.button-primary.button-shadow( href=getTemplateLink) Buy template
+							

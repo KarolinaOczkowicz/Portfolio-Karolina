@@ -1,0 +1,648 @@
+extends  ../_skeleton
+
+//- Includes
+include ../elements/_ui-parallax
+include ../elements/_ui-rd-video
+
+block variables
+	- var activeIndex = 0
+	- var pageClass = 'text-center'
+	- var buyHref = '#'
+	- var indexHref = 'index-variant-1.html'
+
+block title
+	title Home
+
+block page
+	// Page Header
+	include ../sections/_header-landing-default
+
+	section#home.section
+		.swiper-container.swiper-slider.swiper-slider_fullheight-var-1(data-simulate-touch="false", data-loop='false', data-autoplay='6500')
+			.swiper-wrapper
+				.swiper-slide.swiper-slide_video.context-dark.video-bg-overlay.vide_bg(data-vide-bg="video/video" data-vide-options='posterType: jpg')
+					.swiper-slide-caption.text-center
+						.container
+							.row.justify-content-center
+								.col-sm-10.col-lg-7.col-xl-6.col-xxl-5.landing-jumbotron
+									.oveflow-wrapper
+										h1(data-caption-animate='fadeInUp' data-caption-delay='100')
+											span.text-lowercase.heading-2.text-white the
+											span FUTURE
+									.oveflow-wrapper.subtitle-wrapper
+										h5(data-caption-animate='fadeInDown' data-caption-delay='400') Brand New & Improved!
+									.oveflow-wrapper
+										p.big( data-caption-animate='fadeInDown' data-caption-delay='600') theFuture boasts clean and crispy design, bulletproof layout consistence and intuitive navigation.
+										ul.group( data-caption-animate='fadeInDown' data-caption-delay='600' )
+											li
+												a(href=indexHref).button.button-primary.button-shadow Live demo
+
+	='\n'
+
+	section.section-lg.text-center.bg-gray-lighter#features
+		.bg-decor.d-flex.align-items-center.justify-content-end( data-parallax-scroll='{"y": 150,  "smoothness": 30}' )
+			+png('bg-decor-10')
+		.container 
+			// Text Rotator
+			h4='Features are ...'
+				span.text-rotator.font-weight-bold(data-text-class='text-accent font-accent', data-enable='1200', data-words='flexible,ready to use,customizable', data-rotate-interval='3000', data-rotate-animation='fadeInUpSmall, fadeOutUpSmall')
+					span.rotate-area
+			.row.row-30.justify-content-center.offset-top-2
+				.col-lg-3.col-md-5.col-sm-6
+					article.box-counter
+						.box-counter__icon.icon-primary.icon-lg.linear-icon-layers
+						.box-counter__wrap
+							.counter 60
+							span +
+						p.box-counter__title Demo Layouts
+
+				.col-lg-3.col-md-5.col-sm-6
+					article.box-counter
+						.box-counter__icon.icon-primary.icon-lg.linear-icon-files
+						.box-counter__wrap
+							// CountTo
+							.counter-svg
+								svg(version='1.1', x='0px', y='0px', width='44', height='37', viewbox='0 0 81.196 40.831', style='enable-background:new 0 0 81.196 40.831;', xml:space='preserve')
+									g
+										g
+											path(style='clip-path:url(#SVGID_2_);', d='M61.521,0c-5.378,0-10.435,2.094-14.174,5.81l-6.516,6.265l-6.428-6.171\
+                      C30.6,2.094,25.543,0,20.165,0C14.763,0,9.706,2.094,5.903,5.903C2.094,9.706,0,14.763,0,20.165C0,25.543,2.094,30.6,5.903,34.403\
+                      c3.803,3.809,8.86,5.903,14.262,5.903c5.378,0,10.435-2.071,14.174-5.81l6.492-6.241l6.428,6.148\
+                      c3.803,3.809,8.86,5.903,14.262,5.903c5.378,0,10.436-2.071,14.239-5.903c3.809-3.803,5.903-8.86,5.903-14.239\
+                      c0-5.401-2.094-10.459-5.903-14.262C71.956,2.094,66.899,0,61.521,0L61.521,0z M26.155,26.155c-3.208,3.214-8.79,3.214-12.004,0\
+                      c-1.598-1.616-2.485-3.733-2.485-5.991c0-2.281,0.886-4.398,2.508-6.014c1.592-1.598,3.71-2.485,5.991-2.485\
+                      c2.257,0,4.398,0.887,6.084,2.572l6.177,5.926L26.155,26.155z M67.512,26.155c-3.214,3.214-8.703,3.284-12.098-0.088l-6.154-5.926\
+                      l6.247-5.991c3.208-3.214,8.791-3.214,12.004,0c1.598,1.592,2.485,3.733,2.485,5.991C69.997,22.422,69.11,24.54,67.512,26.155\
+                      L67.512,26.155z')
+
+						p.box-counter__title unlimited possibilities
+				.col-lg-3.col-md-5.col-sm-6
+					article.box-counter
+						.box-counter__icon.icon-primary.icon-lg.linear-icon-document
+						.box-counter__wrap
+							.counter 400
+							span +
+						p.box-counter__title Ready to use Elements
+				.col-lg-3.col-md-5.col-sm-6
+					article.box-counter
+						.box-counter__icon.icon-primary.icon-lg.linear-icon-coffee-cup
+						.box-counter__wrap
+							.counter 1000
+							span +
+						p.box-counter__title Cups of Coffee
+						
+					
+	section.section-lg.text-center#niche 
+		.bg-decor.d-flex.align-items-center.justify-content-end( data-parallax-scroll='{"y": 150,  "smoothness": 30}' )
+			+png('bg-decor-4')
+		.container.container-spacing-30
+			h4 Home page Variants
+			p.text-gray Use these pre-made layouts with any page of theFuture.
+			.row.row-60.offset-top-2.justify-content-center
+				.col-lg-4.col-md-6
+					a.thumbnail-type-2(href='index-variant-1.html')
+						figure
+							img(src='images/landing/index-variant-1.jpg', width='350', height='350', alt='')
+						.caption
+							.caption-title home default
+ 
+				.col-lg-4.col-md-6
+					a.thumbnail-type-2(href='index-variant-2.html')
+						figure
+							img(src='images/landing/index-variant-2.jpg', width='350', height='350', alt='')
+						.caption
+							.caption-title home business
+
+				.col-lg-4.col-md-6
+					a.thumbnail-type-2(href='index-variant-3.html')
+						figure
+							img(src='images/landing/index-variant-3.jpg', width='350', height='350', alt='')
+						.caption
+							.caption-title home commercial
+
+				.col-lg-4.col-md-6
+					a.thumbnail-type-2(href='index-variant-4.html')
+						figure
+							img(src='images/landing/index-variant-4.jpg', width='350', height='350', alt='')
+						.caption
+							.caption-title home creative
+
+				.col-lg-4.col-md-6
+					a.thumbnail-type-2(href='index-variant-5.html')
+						figure
+							img(src='images/landing/index-variant-5.jpg', width='350', height='350', alt='')
+						.caption
+							.caption-title home minimal
+
+				.col-lg-4.col-md-6
+					a.thumbnail-type-2(href='index-variant-6.html')
+						figure
+							img(src='images/landing/index-variant-6.jpg', width='350', height='350', alt='')
+						.caption
+							.caption-title home modern
+
+				.col-lg-4.col-md-6
+					a.thumbnail-type-2(href='index-variant-7.html')
+						figure
+							img(src='images/landing/index-variant-7.jpg', width='350', height='350', alt='')
+						.caption
+							.caption-title home personal
+
+				.col-lg-4.col-md-6
+					a.thumbnail-type-2(href='index-variant-8.html')
+						figure
+							img(src='images/landing/index-variant-8.jpg', width='350', height='350', alt='')
+						.caption
+							.caption-title home portfolio
+
+				.col-lg-4.col-md-6
+					a.thumbnail-type-2(href='#')
+						figure
+							img(src='images/landing/coming-soon-2.jpg', width='350', height='350', alt='')
+						.caption
+							.caption-title Coming Soon
+
+	section.section-lg.text-center.bg-gray-lighter#slider
+		.bg-decor.d-flex.align-items-center.justify-content-end( data-parallax-scroll='{"y": 50,  "smoothness": 30}' )
+			+png('bg-decor-10')
+		.container.container-spacing-30
+			h4 Slider Variants
+			p.text-gray Use these pre-made Sliders with any page of theFuture.
+			.row.row-60.offset-top-2.justify-content-center
+				.col-lg-4.col-md-6
+					a(href='index-variant-1.html')
+						figure
+							img(src="images/landing/slider-1.gif", width="400", height="201", alt="")
+							figcaption.p-3.big.text-dark
+								| Circle background
+					
+				.col-lg-4.col-md-6
+					a(href='index-variant-2.html')
+						figure
+							img(src="images/landing/slider-2.gif", width="400", height="201", alt="")
+							figcaption.p-3.big.text-dark
+								| Frame Trapeze
+					
+				.col-lg-4.col-md-6
+					a(href='index-variant-3.html')
+						figure
+							img(src="images/landing/slider-3.gif", width="400", height="201", alt="")
+							figcaption.p-3.big.text-dark
+								| Coverflow
+					
+				.col-lg-4.col-md-6
+					a(href='index-variant-4.html')
+						figure
+							img(src="images/landing/slider-4.gif", width="400", height="201", alt="")
+							figcaption.p-3.big.text-dark
+								| Frame Random
+					
+				.col-lg-4.col-md-6
+					a(href='index-variant-5.html')
+						figure
+							img(src="images/landing/slider-5.gif", width="400", height="201", alt="")
+							figcaption.p-3.big.text-dark
+								| Cropping Circle
+					
+				
+
+	section.section.section-sm.context-dark.bg-accent.section-cta
+		.container
+			.row.row-50.align-items-center.justify-content-center.justify-content-xl-between
+				.col-lg-7.col-xl-9.text-center.text-xl-left
+					h4
+						span.text-transform-none.heading-5 the
+						span.text-transform-none FUTURE
+						br
+						span is a flexible solution with lots of advantages
+					p Our template offers you  a variety of elements to be combined.
+				.col-xl-2.text-center
+					a(target='_blank' href=buyHref).button.button-primary Get it now 
+
+	section.section-lg.bg-default.text-center#pages
+		.bg-decor.d-flex.align-items-start.justify-content-start( data-parallax-scroll='{"y": 150,  "smoothness": 30}' )
+			+png('bg-decor-6')
+		.container.container-spacing-30
+			h4 Pages
+			.isotope-wrap.row.row-70
+				.col-sm-12
+					ul.list-nav.isotope-filters.isotope-filters-horizontal
+						li: a.active(data-isotope-filter='*', data-isotope-group='gallery' href='#') All
+						li: a(data-isotope-filter='Header', data-isotope-group='gallery' href='#') Headers
+						li: a(data-isotope-filter='Footer', data-isotope-group='gallery' href='#') Footers
+						li: a(data-isotope-filter='Blog', data-isotope-group='gallery' href='#') Blog
+						li: a(data-isotope-filter='Portfolio', data-isotope-group='gallery' href='#') Portfolio
+						li: a(data-isotope-filter='Pages', data-isotope-group='gallery' href='#') Pages
+
+
+					.isotope.row#indexid(data-isotope-layout='fitRows', data-isotope-group='gallery')
+						// Header & footer
+						.col-xl-3.col-lg-4.col-md-6.isotope-item(data-filter='Header')
+							a.thumbnail-type-2(href='header-default.html')
+								figure
+									img(src='images/landing/index-1-header.jpg', width='350', height='350', alt='')
+								.caption
+									.caption-title header default
+						.col-xl-3.col-lg-4.col-md-6.isotope-item(data-filter='Header')
+							a.thumbnail-type-2(href='header-default-dark.html')
+								figure
+									img(src='images/landing/index-2-header.jpg', width='350', height='350', alt='')
+								.caption
+									.caption-title header default-dark
+						.col-xl-3.col-lg-4.col-md-6.isotope-item(data-filter='Header')
+							a.thumbnail-type-2(href='header-sidebar-inverse.html')
+								figure
+									img(src='images/landing/index-9-header.jpg', width='350', height='350', alt='')
+								.caption
+									.caption-title header sidebar inverse
+						.col-xl-3.col-lg-4.col-md-6.isotope-item(data-filter='Header')
+							a.thumbnail-type-2(href='header-creative.html')
+								figure
+									img(src='images/landing/index-4-header.jpg', width='350', height='350', alt='')
+								.caption
+									.caption-title header creative
+						.col-xl-3.col-lg-4.col-md-6.isotope-item(data-filter='Header')
+							a.thumbnail-type-2(href='header-corporate.html')
+								figure
+									img(src='images/landing/index-5-header.jpg', width='350', height='350', alt='')
+								.caption
+									.caption-title header corporate
+						.col-xl-3.col-lg-4.col-md-6.isotope-item(data-filter='Header')
+							a.thumbnail-type-2(href='header-transparent.html')
+								figure
+									img(src='images/landing/index-6-header.jpg', width='350', height='350', alt='')
+								.caption
+									.caption-title header transparent
+						.col-xl-3.col-lg-4.col-md-6.isotope-item(data-filter='Header')
+							a.thumbnail-type-2(href='header-sidebar.html')
+								figure
+									img(src='images/landing/index-8-header.jpg', width='350', height='350', alt='')
+								.caption
+									.caption-title header sidebar
+						.col-xl-3.col-lg-4.col-md-6.isotope-item(data-filter='Header')
+							a.thumbnail-type-2(href='header-modern.html')
+								figure
+									img(src='images/landing/index-3-header.jpg', width='350', height='350', alt='')
+								.caption
+									.caption-title header modern
+						.col-xl-3.col-lg-4.col-md-6.isotope-item(data-filter='Footer')
+							a.thumbnail-type-2(href='footer-default.html')
+								figure
+									img(src='images/landing/index-1-footer.jpg', width='350', height='350', alt='')
+								.caption
+									.caption-title home footer 1
+						.col-xl-3.col-lg-4.col-md-6.isotope-item(data-filter='Footer')
+							a.thumbnail-type-2(href='footer-modern.html')
+								figure
+									img(src='images/landing/index-2-footer.jpg', width='350', height='350', alt='')
+								.caption
+									.caption-title home footer 2
+						.col-xl-3.col-lg-4.col-md-6.isotope-item(data-filter='Footer')
+							a.thumbnail-type-2(href='footer-minimal.html')
+								figure
+									img(src='images/landing/index-3-footer.jpg', width='350', height='350', alt='')
+								.caption
+									.caption-title home footer 3
+
+						// blog
+						.col-xl-3.col-lg-4.col-md-6.isotope-item(data-filter='Blog')
+							a.thumbnail-type-2(href='classic-blog.html')
+								figure
+									img(src='images/landing/blog-1.jpg', width='350', height='350', alt='')
+								.caption
+									.caption-title Classic Blog
+						.col-xl-3.col-lg-4.col-md-6.isotope-item(data-filter='Blog')
+							a.thumbnail-type-2(href='grid-blog.html')
+								figure
+									img(src='images/landing/blog-2.jpg', width='350', height='350', alt='')
+								.caption
+									.caption-title Grid Blog
+						.col-xl-3.col-lg-4.col-md-6.isotope-item(data-filter='Blog')
+							a.thumbnail-type-2(href='masonry-blog.html')
+								figure
+									img(src='images/landing/blog-3.jpg', width='350', height='350', alt='')
+								.caption
+									.caption-title Masonry Blog
+						.col-xl-3.col-lg-4.col-md-6.isotope-item(data-filter='Blog')
+							a.thumbnail-type-2(href='justify-blog.html')
+								figure
+									img(src='images/landing/blog-4.jpg', width='350', height='350', alt='')
+								.caption
+									.caption-title Justify Blog
+
+						.col-xl-3.col-lg-4.col-md-6.isotope-item(data-filter='Blog')
+							a.thumbnail-type-2(href=postLink)
+								figure
+									img(src='images/landing/blog-5.jpg', width='350', height='350', alt='')
+								.caption
+									.caption-title Standard post
+						.col-xl-3.col-lg-4.col-md-6.isotope-item(data-filter='Blog')
+							a.thumbnail-type-2(href='nonstandard-post-with-sidebar.html')
+								figure
+									img(src='images/landing/blog-6.jpg', width='350', height='350', alt='')
+								.caption
+									.caption-title Nonstandard post with sidebar
+						.col-xl-3.col-lg-4.col-md-6.isotope-item(data-filter='Blog')
+							a.thumbnail-type-2(href='nonstandard-post.html')
+								figure
+									img(src='images/landing/blog-7.jpg', width='350', height='350', alt='')
+								.caption
+									.caption-title Nonstandard post
+						.col-xl-3.col-lg-4.col-md-6.isotope-item(data-filter='Blog')
+							a.thumbnail-type-2(href=postSlider)
+								figure
+									img(src='images/landing/blog-8.jpg', width='350', height='350', alt='')
+								.caption
+									.caption-title Gallery post
+						.col-xl-3.col-lg-4.col-md-6.isotope-item(data-filter='Blog')
+							a.thumbnail-type-2(href=postImage)
+								figure
+									img(src='images/landing/blog-9.jpg', width='350', height='350', alt='')
+								.caption
+									.caption-title Image post
+						.col-xl-3.col-lg-4.col-md-6.isotope-item(data-filter='Blog')
+							a.thumbnail-type-2(href=blogPostLink)
+								figure
+									img(src='images/landing/blog-10.jpg', width='350', height='350', alt='')
+								.caption
+									.caption-title Link post
+						.col-xl-3.col-lg-4.col-md-6.isotope-item(data-filter='Blog')
+							a.thumbnail-type-2(href=postQuote)
+								figure
+									img(src='images/landing/blog-11.jpg', width='350', height='350', alt='')
+								.caption
+									.caption-title Quote post
+						.col-xl-3.col-lg-4.col-md-6.isotope-item(data-filter='Blog')
+							a.thumbnail-type-2(href=postVideo)
+								figure
+									img(src='images/landing/blog-12.jpg', width='350', height='350', alt='')
+								.caption
+									.caption-title Video post 
+						.col-xl-3.col-lg-4.col-md-6.isotope-item(data-filter='Blog')
+							a.thumbnail-type-2(href=postAudio)
+								figure
+									img(src='images/landing/blog-13.jpg', width='350', height='350', alt='')
+								.caption
+									.caption-title Audio post
+
+						// Portfolio
+						.col-xl-3.col-lg-4.col-md-6.isotope-item(data-filter='Portfolio')
+							a.thumbnail-type-2(href='portfolio-2col.html')
+								figure
+									img(src='images/landing/portfolio-1.jpg', width='350', height='350', alt='')
+								.caption
+									.caption-title Portfolio 2 columns
+						.col-xl-3.col-lg-4.col-md-6.isotope-item(data-filter='Portfolio')
+							a.thumbnail-type-2(href='portfolio.html')
+								figure
+									img(src='images/landing/portfolio-2.jpg', width='350', height='350', alt='')
+								.caption
+									.caption-title Portfolio 3 columns
+						.col-xl-3.col-lg-4.col-md-6.isotope-item(data-filter='Portfolio')
+							a.thumbnail-type-2(href='portfolio-4col.html')
+								figure
+									img(src='images/landing/portfolio-3.jpg', width='350', height='350', alt='')
+								.caption
+									.caption-title Portfolio 4 columns
+						.col-xl-3.col-lg-4.col-md-6.isotope-item(data-filter='Portfolio')
+							a.thumbnail-type-2(href='portfolio-fullwidth.html')
+								figure
+									img(src='images/landing/portfolio-4.jpg', width='350', height='350', alt='')
+								.caption
+									.caption-title Portfolio Fullwidth
+						.col-xl-3.col-lg-4.col-md-6.isotope-item(data-filter='Portfolio')
+							a.thumbnail-type-2(href='portfolio-justify.html')
+								figure
+									img(src='images/landing/portfolio-5.jpg', width='350', height='350', alt='')
+								.caption
+									.caption-title Portfolio Justify
+						.col-xl-3.col-lg-4.col-md-6.isotope-item(data-filter='Portfolio')
+							a.thumbnail-type-2(href='portfolio-masonry.html')
+								figure
+									img(src='images/landing/portfolio-6.jpg', width='350', height='350', alt='')
+								.caption
+									.caption-title Portfolio Masonry
+						.col-xl-3.col-lg-4.col-md-6.isotope-item(data-filter='Portfolio')
+							a.thumbnail-type-2(href='portfolio-album.html')
+								figure
+									img(src='images/landing/portfolio-7.jpg', width='350', height='350', alt='')
+								.caption
+									.caption-title Portfolio Album
+						.col-xl-3.col-lg-4.col-md-6.isotope-item(data-filter='Portfolio')
+							a.thumbnail-type-2(href='single-portfolio.html')
+								figure
+									img(src='images/landing/portfolio-8.jpg', width='350', height='350', alt='')
+								.caption
+									.caption-title Single Portfolio
+
+						// Pages
+						.col-xl-3.col-lg-4.col-md-6.isotope-item(data-filter='Pages')
+							a.thumbnail-type-2(href='about.html')
+								figure
+									img(src='images/landing/page-1.jpg', width='350', height='350', alt='')
+								.caption
+									.caption-title About
+						.col-xl-3.col-lg-4.col-md-6.isotope-item(data-filter='Pages')
+							a.thumbnail-type-2(href='our-team.html')
+								figure
+									img(src='images/landing/page-2.jpg', width='350', height='350', alt='')
+								.caption
+									.caption-title Our Team
+						.col-xl-3.col-lg-4.col-md-6.isotope-item(data-filter='Pages')
+							a.thumbnail-type-2(href=teamMember)
+								figure
+									img(src='images/landing/page-3.jpg', width='350', height='350', alt='')
+								.caption
+									.caption-title Team Member Profile
+						.col-xl-3.col-lg-4.col-md-6.isotope-item(data-filter='Pages')
+							a.thumbnail-type-2(href='services.html')
+								figure
+									img(src='images/landing/page-4.jpg', width='350', height='350', alt='')
+								.caption
+									.caption-title Services
+						.col-xl-3.col-lg-4.col-md-6.isotope-item(data-filter='Pages')
+							a.thumbnail-type-2(href='single-service.html')
+								figure
+									img(src='images/landing/page-5.jpg', width='350', height='350', alt='')
+								.caption
+									.caption-title Single Service
+						.col-xl-3.col-lg-4.col-md-6.isotope-item(data-filter='Pages')
+							a.thumbnail-type-2(href='404-page.html')
+								figure
+									img(src='images/landing/page-6.jpg', width='350', height='350', alt='')
+								.caption
+									.caption-title 404 Page
+						.col-xl-3.col-lg-4.col-md-6.isotope-item(data-filter='Pages')
+							a.thumbnail-type-2(href='coming-soon.html')
+								figure
+									img(src='images/landing/page-7.jpg', width='350', height='350', alt='')
+								.caption
+									.caption-title Coming Soon
+						.col-xl-3.col-lg-4.col-md-6.isotope-item(data-filter='Pages')
+							a.thumbnail-type-2(href='privacy-policy.html')
+								figure
+									img(src='images/landing/page-8.jpg', width='350', height='350', alt='')
+								.caption
+									.caption-title Privacy Policy
+						.col-xl-3.col-lg-4.col-md-6.isotope-item(data-filter='Pages')
+							a.thumbnail-type-2(href='accordion.html')
+								figure
+									img(src='images/landing/page-9.jpg', width='350', height='350', alt='')
+								.caption
+									.caption-title Accordion
+						.col-xl-3.col-lg-4.col-md-6.isotope-item(data-filter='Pages')
+							a.thumbnail-type-2(href='tabs.html')
+								figure
+									img(src='images/landing/page-10.jpg', width='350', height='350', alt='')
+								.caption
+									.caption-title Tabs
+						.col-xl-3.col-lg-4.col-md-6.isotope-item(data-filter='Pages')
+							a.thumbnail-type-2(href='buttons.html')
+								figure
+									img(src='images/landing/page-11.jpg', width='350', height='350', alt='')
+								.caption
+									.caption-title Buttons
+						.col-xl-3.col-lg-4.col-md-6.isotope-item(data-filter='Pages')
+							a.thumbnail-type-2(href='typography.html')
+								figure
+									img(src='images/landing/page-12.jpg', width='350', height='350', alt='')
+								.caption
+									.caption-title Typography
+						.col-xl-3.col-lg-4.col-md-6.isotope-item(data-filter='Pages')
+							a.thumbnail-type-2(href='countdown.html')
+								figure
+									img(src='images/landing/page-13.jpg', width='350', height='350', alt='')
+								.caption
+									.caption-title Countdown
+						.col-xl-3.col-lg-4.col-md-6.isotope-item(data-filter='Pages')
+							a.thumbnail-type-2(href='animated-counter.html')
+								figure
+									img(src='images/landing/page-14.jpg', width='350', height='350', alt='')
+								.caption
+									.caption-title Animated Counter
+						.col-xl-3.col-lg-4.col-md-6.isotope-item(data-filter='Pages')
+							a.thumbnail-type-2(href='number-counter.html')
+								figure
+									img(src='images/landing/page-15.jpg', width='350', height='350', alt='')
+								.caption
+									.caption-title Number Counter
+						.col-xl-3.col-lg-4.col-md-6.isotope-item(data-filter='Pages')
+							a.thumbnail-type-2(href='circles-counter.html')
+								figure
+									img(src='images/landing/page-16.jpg', width='350', height='350', alt='')
+								.caption
+									.caption-title Circles Counter
+						.col-xl-3.col-lg-4.col-md-6.isotope-item(data-filter='Pages')
+							a.thumbnail-type-2(href='contacts.html')
+								figure
+									img(src='images/landing/page-17.jpg', width='350', height='350', alt='')
+								.caption
+									.caption-title Contacts
+
+
+
+	section.section.bg-gray-lighter.section-lg.text-center.decor-text#advantages(data-content='Features')
+		.container
+			h4.wow.fadeInUp 
+				span.text-transform-none the
+				span Future Advantages
+			.row.justify-content-center.row-60.offset-top-2
+				.col-xl-3.col-md-6
+					article.blurb.blurb-circle.blurb-circle_centered
+						.blurb-circle__icon
+							span.icon.icon-circle.icon-lg.linear-icon-inbox.wow.fadeInUp
+						.wow.fadeInUp(data-wow-delay="0.25s")
+							p.blurb__title.heading-6 Accelerate development 
+							p Speed up your project development in 2 or even 3 times using this template.
+
+				.col-xl-3.col-md-6
+					article.blurb.blurb-circle.blurb-circle_centered
+						.blurb-circle__icon
+							span.icon.icon-circle.icon-lg.linear-icon-bubble-question.wow.fadeInUp
+						.wow.fadeInUp(data-wow-delay="0.25s")
+							p.blurb__title.heading-6 Reduce your QA
+							p Thanks to this template, your project fixes will be made in a blink of an eye.
+
+				.col-xl-3.col-md-6
+					article.blurb.blurb-circle.blurb-circle_centered
+						.blurb-circle__icon
+							span.icon.icon-circle.icon-lg.linear-icon-coin-dollar.wow.fadeInUp
+						.wow.fadeInUp(data-wow-delay="0.25s")
+							p.blurb__title.heading-6 Save your money
+							p An accelerated development lets you save a lot on creating your projects. 
+
+				.col-xl-3.col-md-6
+					article.blurb.blurb-circle.blurb-circle_centered
+						.blurb-circle__icon
+							span.icon.icon-circle.icon-lg.linear-icon-thumbs-up.wow.fadeInUp
+						.wow.fadeInUp(data-wow-delay="0.25s")
+							p.blurb__title.heading-6 Made for You
+							p The main idea is to create a product by people for the people.
+
+	include ../sections/_section-home-intro-included-images
+
+	section.section.bg-default.section-xl.text-center
+		.bg-decor.d-flex.align-items-center.justify-content-end( data-parallax-scroll='{"y": 50,  "smoothness": 30}' )
+			+png('bg-decor-11')
+		.container
+			.row.row-50.justify-content-xl-between
+				.col-xl-4.image-wrapper-2.order-xl-1.d-none.d-md-block
+					img(src="images/landing/home-14.png", alt="").image__item
+				.col-lg-6.col-xl-4.text-xl-right
+					.inset-xxl-right-80
+						.row.row-xl-80.row-50
+							.col-xl-12.col-md-6
+								.unit.flex-column.flex-lg-column.flex-xl-row.flex-xl-row-reverse
+									.unit-left
+										span.icon.icon-lg.icon-primary.linear-icon-magnifier
+									.unit-body
+										h6 SEO Friendly
+										p.d-lg-none.d-xl-block Valid code and performance optimized framework make SEO easy and hassle-free.
+							.col-xl-12.col-md-6
+								.unit.flex-column.flex-lg-column.flex-xl-row.flex-xl-row-reverse
+									.unit-left
+										span.icon.icon-lg.icon-primary.linear-icon-desktop
+									.unit-body
+										h6 Advanced UI Kit
+										p.d-lg-none.d-xl-block theFuture comes with a powerful and flexible extended toolkit in addition to basic Bootstrap.
+				.col-lg-6.col-xl-4.text-xl-left.order-xl-2
+					.inset-xxl-left-80
+						.row.row-xl-80.row-50
+							.col-xl-12.col-md-6
+								.unit.flex-column.flex-lg-column.flex-xl-row.flex-xxl-row
+									.unit-left
+										span.icon.icon-lg.icon-primary.linear-icon-rocket
+									.unit-body
+										h6 Powerful flexbox grid system
+										p.d-lg-none.d-xl-block theFuture includes a powerful mobile-first flexbox grid system for building layouts.
+							.col-xl-12.col-md-6
+								.unit.flex-column.flex-lg-column.flex-xl-row.flex-xxl-row
+									.unit-left
+										span.icon.icon-lg.icon-primary.linear-icon-cog
+									.unit-body
+										h6 Flexible and Multipurpose
+										p.d-lg-none.d-xl-block theFuture allows to create various websites for complex and scalable projects.
+
+	section.section.section-md.bg-gray-dark.section-cta
+		.container
+			.row.row-30.align-items-center.justify-content-center.justify-content-xl-between
+				.col-lg-7.col-xl-10.text-center.text-xl-left
+					h4
+						span.text-transform-none.heading-5 the
+						span.text-transform-none FUTURE 
+						br
+						span is a perfect web design solution for everybody
+					p Become the owner of the best solution for creating your own website!
+				.col-xl-2.text-center
+					a(target='_blank' href=buyHref).button.button-primary Get it now
+
+	include ../sections/_section-landing-core-features
+
+	include ../sections/_section-landing-support
+
+	// Page Footer
+	include ../sections/_footer-corporate
+
+block modals
+	include ../includes/_modal-login
+	include ../includes/_modal-register

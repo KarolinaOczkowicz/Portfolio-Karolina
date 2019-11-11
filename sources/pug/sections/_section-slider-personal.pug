@@ -1,0 +1,43 @@
+svg( class='defs' )
+	defs
+		pattern#pattern( fill='#1F2845', width='40', height='40', patternunits='userSpaceOnUse' )
+			polygon( points='0 40 40 0 20 0 0 20' )
+			polygon( points='40 40 40 20 20 40' )
+
++swiper({ 
+	effect: 'frame-random', 
+	speed: 900,
+	autoplay: 6000,
+	loop: 'false', 
+	mousewheel: 'false', 
+	keyboard: 'true', 
+	navigation: true })( data-frame-fill='url(#pattern)' ).swiper-slider_fullheight.context-dark
+	.swiper-slide
+		.swiper-slide-img( style='background-image: url(images/slider-slide-3-1920x1080.jpg);', data-swiper-anime='{ "animation": "swiperSlideZoomOut", "duration": 900 }' )
+		.swiper-slide-caption.text-left
+			h2( data-swiper-anime='{ "animation": "swiperContentDiagonal", "duration": 600, "delay": 500 }' )
+				| The Power of Bootstrap  
+				br.d-none.d-lg-block
+				|  Discover it with theFuture
+			a.button.button-primary.button-shadow( data-swiper-anime='{ "animation": "swiperContentDiagonal", "duration": 400, "delay": 400 }', href=getTemplateLink) Buy template
+			
+	.swiper-slide
+		.swiper-slide-img( style='background-image: url(images/slider-slide-4-1920x1095.jpg);', data-swiper-anime='{ "animation": "swiperSlideZoomOut", "duration": 900 }' )
+		.swiper-slide-caption.text-right
+			h1( data-swiper-anime='{ "animation": "swiperContentDiagonal", "duration": 600, "delay": 500 }' )
+				span.text-lowercase.heading-2.text-white the
+				span FUTURE
+			h3( data-swiper-anime='{ "animation": "swiperContentDiagonal", "duration": 600, "delay": 600 }' ) New HTML Templates Generation
+			.group-lg.group-middle( data-swiper-anime='{ "animation": "swiperContentDiagonal", "duration": 600, "delay": 700 }' )
+				a.button.button-primary.button-shadow( href='#' + seeFeaturesLink, data-custom-scroll-to=seeFeaturesLink) See Features
+				a.button.button-black.button-shadow(href=getTemplateLink) Buy theme
+				
+	.swiper-slide
+		.swiper-slide-img.swiper-slide_video.context-dark.vide_bg( data-vide-bg="video/video" data-vide-options='posterType: jpg', data-swiper-anime='{ "animation": "swiperSlideZoomOut", "duration": 900 }' )
+		.swiper-slide-caption
+			h2( data-swiper-anime='{ "animation": "swiperContentDiagonal", "duration": 600, "delay": 500 }' ) Build by geeks used by humans. 
+			h5.text-width-2.block-centered( data-swiper-anime='{ "animation": "swiperContentDiagonal", "duration": 600, "delay": 600 }'  ) theFuture aims to satisfy real need of real projects. We've got a pack a of tools for that.
+			.group-lg.group-middle( data-swiper-anime='{ "animation": "swiperContentDiagonal", "duration": 600, "delay": 700 }' )
+				a.button.button-black.button-shadow( href='#') Supported Plugins
+				a.button.button-primary.button-shadow( href=getTemplateLink) Buy theme
+				
